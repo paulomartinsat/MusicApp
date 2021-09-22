@@ -1,0 +1,22 @@
+<%= form_with(model: data_summary) do |form| %>
+  <% if data_summary.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(data_summary.errors.count, "error") %> prohibited this data_summary from being saved:</h2>
+
+      <ul>
+        <% data_summary.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :data %>
+    <%= form.text_field :data %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

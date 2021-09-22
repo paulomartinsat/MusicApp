@@ -1,0 +1,2 @@
+class DataSummary < ApplicationRecord
+end

@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Data Summaries</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Data</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @data_summaries.each do |data_summary| %>
+      <tr>
+        <td><%= data_summary["artists"] %></td>
+        <td><%= data_summary["artists data link"] %></td>
+        <td><%= link_to 'Show', data_summary %></td>
+        <td><%= link_to 'Edit', edit_data_summary_path(data_summary) %></td>
+        <td><%= link_to 'Destroy', data_summary, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Data Summary', new_data_summary_path %>

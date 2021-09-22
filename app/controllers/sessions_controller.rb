@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
         if user.present? && user.authenticate(params[:password])
             #sets userid sessions
             session[:user_id]=user.id
-            redirect_to root_path, notice 'Logged in'
+            redirect_to artist_list_path, notice: 'Logged in'
         else
             flash.now[:alert]="Sorry, we couldn't find an account with this username. Please check you're using the right username and try again."
             render :new

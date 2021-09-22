@@ -1,0 +1,29 @@
+<h1>Sign Up</h1>
+  <%= form_with model: @user, url: sign_up_path do |f| %>
+    <p>
+    <%= f.label 'full_name' %><br>
+    <%= f.text_field :full_name %>
+    </p>
+    <p>
+    <%= f.label 'username' %><br>
+    <%= f.text_field :username %>
+    </p>
+    <p>
+    <%= f.label 'password' %><br>
+    <%= f.password_field :password %>
+    </p>
+    <p>
+    <%= f.label 'password_confirmation' %><br>
+    <%= f.password_field :password_confirmation %>
+    </p>
+    <p>
+    <% if @user.errors.present? %>
+    <%=@user.errors%>
+    <%=%>
+    <%end%>
+    </p>
+
+    <p>
+    <%= f.submit 'Sign Up' %>
+    </p>
+  <% end %>

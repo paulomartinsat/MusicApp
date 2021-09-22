@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :data_summaries
   get 'artist_list/index'
   get 'welcome/index'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
@@ -17,7 +18,7 @@ Rails.application.routes.draw do
     post 'password/reset', to: 'password_resets#create'
     get 'password/reset/edit', to: 'password_resets#edit'
     patch 'password/reset/edit', to: 'password_resets#update'
-      
+    get 'artist_list', to: 'artist_list#index'
     
   
 

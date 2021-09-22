@@ -5,7 +5,7 @@ class RegistrationsController < ApplicationController
     end
     def create
         @user=User.new(user_params)
-        if @user.save!
+        if @user.save
             #stores userid in a session
             session[:user_id]=@user.id 
             redirect_to root_path, notice: "Sucessfully created an account!"
