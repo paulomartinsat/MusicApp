@@ -5,3 +5,9 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
+artists = Artist.create(ArtistsRequestService.new.request.flatten)
+
+list_artists= ArtistsRequestService.new.request.flatten
+

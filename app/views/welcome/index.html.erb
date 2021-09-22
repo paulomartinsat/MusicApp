@@ -4,6 +4,7 @@
     Logged in as: <%= Current.user.username%><br>
     <%= link_to 'Edit Password', edit_password_path %>
     <%= button_to 'Logout', logout_path, method: :delete %>
+    <%= button_to 'Artists List', artist_list_path%>
 <% else %>
     <%= link_to 'Sign Up', sign_up_path %>
     or

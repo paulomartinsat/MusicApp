@@ -10,5 +10,6 @@ class ApplicationController < ActionController::Base
     end
     def has_role?(role)
         Current.user && Current.user.has_role?(role)
+    end
 end
 

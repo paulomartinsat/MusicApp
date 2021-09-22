@@ -1,2 +1,23 @@
 <h1>Artist List</h1>
-<p>Find me in app/views/artist_list/index.html.erb</p>
+<table>
+  <thead>
+    <tr>
+      <th>Artists</th>
+      <th> Twitter</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @artist.each do |artist| %>
+      <tr>
+        <td><%= artist.name %></td>
+        <td><%= artist.twitter %></td>
+        
+        <% if Current.user.has_role?(:admin)%>
+         <td><%= link_to 'Destroy', artist_list_path, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <%end%>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

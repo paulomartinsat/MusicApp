@@ -18,7 +18,7 @@
     </p>
     <p>
     <% if @user.errors.present? %>
-    <%=@user.errors%>
+    <%=@user.errors[:username]%>
     <%=%>
     <%end%>
     </p>
