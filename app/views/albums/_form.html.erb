@@ -1,0 +1,25 @@
+<%= form_with model: album, url: url  , method: method do |f| %>
+    <p>
+      <%= f.label 'artist_id' %><br>
+      <%= f.collection_select :artist_id, Artist.order(:name), :id, :name, include_blank: 'Select your artist' %>
+    </p>
+    <p>
+      <%= f.label 'album_name' %><br>
+      <%= f.text_field :album_name %>
+    </p>
+    <p>
+      <%= f.label 'year' %><br>
+      <%= f.number_field :year %>
+    </p>
+    <p>
+      <% if @album.errors.present? %>
+        <%=@album.errors[:artist_id]%>
+      <%end%>
+    </p>
+    <p>
+      <%= f.submit 'Create' %>
+    </p>
+    <p>
+      <%= button_to 'Logout', logout_path, method: :delete %>
+    </p>
+<% end %>
