@@ -1,24 +1,21 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Hi, my name is Paulo and this is my code for the task. First of all, sorry for my delay, i had some issues on my computer and lost some files, but now itś complete.
+
+Thanks for the opportunity and let's go for the steps
+
+
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version:3.0.0
 
-* System dependencies
+* Configuration => Rails 6.1.4.1
 
-* Configuration
+* Database creation : run rails db:seed on terminal
 
-* Database creation
+* How to run the test suite: raise rails server and create a new user with Full name, username and password, after that, you will be redirected to Artists List page, you can log out at anytime on the button in the navbar.
 
-* Database initialization
+* Test Admin role: after creating the user, open rails console and instatiates a user by typing: user= User.last, and then , still in the console set admin role to user by typing: user.add_role :admin. This will grant admin privileges that allow to delete an album. 
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
