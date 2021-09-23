@@ -8,6 +8,11 @@ gem 'rolify'
 gem 'cancancan'
 gem 'rest-client'
 gem 'httparty'
+gem 'select2-rails'
+gem 'bootstrap'
+gem 'jquery-rails'
+
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
