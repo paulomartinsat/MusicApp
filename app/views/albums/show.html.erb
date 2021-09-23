@@ -1,6 +1,20 @@
-<h1>Showing Album</h1>
-<% @album.each do |album|%>
-    <td><%= album.artist.name %></td>
-    <td><%= album.album_name %></td>
-    <td><%= album.year %></td>
-<%end%>
+<h1>Showing your edited album</h1>
+<%= link_to 'Create new album', new_album_path, class:"btn btn-primary btn-lg", role:"button" %>
+<%= link_to 'Albums', albums_path, class:"btn btn-primary btn-lg", role:"button"%>
+<table class="table table-hover ">
+  <thead>
+    <tr>
+      <th>Artist:</th>
+      <th> Album Name:</th>
+      <th> Year:</th>
+      <th colspan="6"></th>
+    </tr>
+  </thead>
+  <tbody>
+      <tr>
+        <td><%= @album.artist.name %></td>
+        <td><%= @album.album_name %></td>
+        <td><%= @album.year %></td>
+      </tr>
+  </tbody>
+</table>

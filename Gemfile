@@ -11,7 +11,7 @@ gem 'httparty'
 gem 'select2-rails'
 gem 'bootstrap'
 gem 'jquery-rails'
-d
+
 
 
 
@@ -45,10 +45,8 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'sqlite3', '~> 1.4'
 end
-#production
-group :production do
-  gem 'pg'
-en
+
+
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
