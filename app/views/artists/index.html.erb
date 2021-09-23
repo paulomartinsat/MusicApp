@@ -1,0 +1,19 @@
+<h1>Artist List</h1>
+<h1><%=link_to 'Albums', albums_path%></h1>
+<table>
+  <thead>
+    <tr>
+      <th>Artists</th>
+      <th> Twitter</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @artists.each do |artist| %>
+      <tr>
+        <td><%= artist.name %></td>
+        <td><%= artist.twitter %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

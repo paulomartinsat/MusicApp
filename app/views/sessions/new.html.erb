@@ -2,11 +2,12 @@
   <%= form_with url: sign_in_path do |f| %>
     <p>
     <%= f.label 'username:'%><br>
-    <%= f.text_field :username, id: 'email' %>
+    <%= f.text_field :username, id: 'username' %>
     </p>
     <p>
     <%= f.label 'password:'%><br>
-    <%= f.password_field :password, id: 'password' %>
+    <%= f.password_field :password, id: 'password' %><br>
+    <%= link_to 'Forgot your password?', password_reset_path %>
     </p>
     <p>
     <%= f.submit 'Log In' %>

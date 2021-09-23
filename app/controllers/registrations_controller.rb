@@ -1,5 +1,6 @@
 class RegistrationsController < ApplicationController
     #instatiates new user
+    #skip_before_action :authorized, only: [:new, :create, ]
     def new
         @user=User.new
     end
