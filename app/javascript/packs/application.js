@@ -20,5 +20,9 @@ document.addEventListener("turbolinks:load", () => {
     $('[data-toggle="popover"]').popover()
 })
 require("bootstrap")
+require("jquery")
 
 //= require jquery
+//= require_tree
+//= require bootstrap/dist/js/bootstrap
+//= require popper.js/dist/popper

@@ -1,13 +1,7 @@
-<body>
-<h1>Welcome to MySic App: Your personal music system</h1>
-<%if current_user%>
-    Logged in as: <%= current_user.username%><br>
-    <%= link_to 'Edit Password', edit_password_path %>
-    <%= button_to 'Logout', logout_path, method: :delete %>
-    <%= button_to 'Artists List', artists_path%>
-<% else %>
-    <%= link_to 'Sign Up', sign_up_path %>
-    or
-    <%= link_to 'Login', sign_in_path %>
-<% end %>
-</body>
+<div class="jumbotron">
+    <h1 class="display-4">Welcome to MySic App: Your personal music system</h1>
+    <p class="lead">This is a Music Website to add and edit your favorites albums of the best artists in the world!</p>
+    <hr class="my-4">
+    <p> Stay connected with us by creating an account or login in an existing account</p>
+</div>
+<%=render "menu"%>

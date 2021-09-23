@@ -1,3 +1,6 @@
 <h1>Showing Album</h1>
-
-<%=@album.album_name%>
+<% @album.each do |album|%>
+    <td><%= album.artist.name %></td>
+    <td><%= album.album_name %></td>
+    <td><%= album.year %></td>
+<%end%>

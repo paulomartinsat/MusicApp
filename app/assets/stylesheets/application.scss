@@ -12,17 +12,7 @@
  *
  *= require_tree .
  *= require_self
+ *= require bootstrap/dist/css/bootstrap
  */
  @import "bootstrap/scss/bootstrap";
 
-.button{
-    background-color: yellowgreen;
-    border-radius: 12px;
-    size: 20px;
-    color: white;
-    text-decoration: none;
-
-}
-.custom-nav {
-    margin-top: 75px;
-  }
