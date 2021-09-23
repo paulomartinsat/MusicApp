@@ -4,7 +4,7 @@ class ArtistsRequestDataService
 
     end
     def request 
-        endpoint = 'https://moat.ai/api/task/?artist_id=<19>'
+        endpoint = 'https://moat.ai/api/task/?artist_id=19'
         response = HTTParty.get(
             endpoint,
             :headers => {'Content-Type' => 'application/json',
