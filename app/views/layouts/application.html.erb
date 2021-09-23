@@ -15,17 +15,15 @@
     <div class = "container-fluid">
       <ul class="nav justify-content-center">
         <li class="nav-item">
-          <a class="nav-link" href="www.github.com/paulomartinsat">Author</a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="/welcome/index">Homepage</a>
         </li>
          <li class="nav-item">
           <%= button_to 'Logout', logout_path, class:"nav-link", method: :delete %>
-
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Artists List', artists_path, class:"nav-link" %>
         </li>
     </ul>
-
       <p class="notice"><%=notice%>
       <p class="alert"><%=alert%>
 
