@@ -5,31 +5,37 @@
     <title>MySic App</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= stylesheet_link_tag 'application'%>
     <%= stylesheet_pack_tag 'application'%>
+    <%= stylesheet_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application' %>
   </head>
   <body>   
-  
+    <div class = "container-fluid">
+      <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" href="www.github.com/paulomartinsat">Author</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/welcome/index">Homepage</a>
+        </li>
+         <li class="nav-item">
+          <%= button_to 'Logout', logout_path, class:"nav-link", method: :delete %>
 
-  <p class="notice"><%=notice%>
-  <p class="alert"><%=alert%>
+        </li>
+    </ul>
 
-  <a class="button" herf= "/album">Album</a>
+      <p class="notice"><%=notice%>
+      <p class="alert"><%=alert%>
 
-
-    
-
-
-  <%= yield %>
+      <%= yield %>
+    </div>
+    <script>$.notify("Started!", "success");</script>
   </body>
   
 
 
   
 
-
-
-
-  
 </html>
