@@ -18,6 +18,7 @@ gem 'pronto-scss', require: false
 gem 'pronto-eslint', require: false
 gem 'pronto-brakeman', require: false
 gem 'pronto-rails_best_practices', require: false
+gem 'pronto-circleci'
 
 
 

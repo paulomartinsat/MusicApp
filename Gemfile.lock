@@ -1,5 +1,5 @@
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     actioncable (6.1.4.1)
       actionpack (= 6.1.4.1)
@@ -187,6 +187,8 @@ GEM
     pronto-brakeman (0.11.1)
       brakeman (>= 3.2.0)
       pronto (~> 0.11.0)
+    pronto-circleci (1.0.1)
+      pronto (~> 0.9)
     pronto-eslint (0.11.0)
       eslintrb (~> 2.0, >= 2.0.0)
       pronto (~> 0.11.0)
@@ -360,6 +362,7 @@ DEPENDENCIES
   oj
   pronto
   pronto-brakeman
+  pronto-circleci
   pronto-eslint
   pronto-rails_best_practices
   pronto-rubocop
