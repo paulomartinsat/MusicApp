@@ -7,4 +7,7 @@ class WelcomeController < ApplicationController
 
   def delete
   end
+
+  def leave
+  end
 end
