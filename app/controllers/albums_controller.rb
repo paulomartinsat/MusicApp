@@ -7,6 +7,10 @@ class AlbumsController < ApplicationController
     def new
         @album=Album.new
     end
+    def post_here
+        @album = Album.new(artist_id: 121221)
+    end
+
     def create
         @album=Album.new(album_params)
         if @album.save!
