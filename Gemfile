@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.0'
+ruby '3.0.2'
 
 gem 'bcrypt'
 gem 'rolify'
@@ -11,7 +11,13 @@ gem 'httparty'
 gem 'select2-rails'
 gem 'bootstrap'
 gem 'jquery-rails'
-
+gem 'pronto'
+gem 'oj'
+gem 'pronto-rubocop', require: false
+gem 'pronto-scss', require: false
+gem 'pronto-eslint', require: false
+gem 'pronto-brakeman', require: false
+gem 'pronto-rails_best_practices', require: false
 
 
 

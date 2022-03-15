@@ -1,0 +1,14 @@
+source 'https://rubygems.org'
+
+git_source(:github) do |repo_name|
+  repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
+  "https://github.com/#{repo_name}.git"
+end
+
+gem 'pronto'
+gem 'oj'
+gem 'pronto-rubocop', require: false
+gem 'pronto-scss', require: false
+gem 'pronto-eslint', require: false
+gem 'pronto-brakeman', require: false
+gem 'pronto-rails_best_practices', require: false
