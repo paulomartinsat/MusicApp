@@ -8,7 +8,7 @@ class AlbumsController < ApplicationController
         @album=Album.new
     end
     def post_here
-        @album = Album.new(artist_id: 121221)
+        @album = Album.new(artist_id: 123421)
     end
 
     def create
