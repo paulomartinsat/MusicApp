@@ -40,7 +40,7 @@ jobs:
       - run:
           name: run source code analysis
           command: |
-            bundle exec pronto run -c origin/master -f github_status -f github_pr_review --exit-code
+            bundle exec pronto run -c origin/master -f github_status -f github_pr --exit-code
       - store_artifacts:
           path: ./tmp
 
