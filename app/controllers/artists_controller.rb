@@ -7,4 +7,8 @@ class ArtistsController < ApplicationController
     def create
         @artists = Artist.new
     end
+
+    def free
+        @artists = Artist.create
+    end
 end
