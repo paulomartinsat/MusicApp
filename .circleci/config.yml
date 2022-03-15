@@ -3,13 +3,13 @@ version: 2
 jobs:
   lint:
     environment:
-      - BUNDLE_GEMFILE: Gemfile.tools
+      - BUNDLE_GEMFILE: Gemfile
     docker:
       # specify the version you desire here
       - image: circleci/ruby:2.4.2-stretch-node-browsers
         environment:
-          RAILS_ENV: test
-          RACK_ENV: test
+          RAILS_ENV: development
+          RACK_ENV: development
 
     working_directory: ~/repo
 
@@ -17,7 +17,7 @@ jobs:
       - checkout
       - restore_cache:
           keys:
-          - v1-tools-dependencies-{{ checksum "Gemfile.tools.lock" }}
+          - v1-tools-dependencies-{{ checksum "Gemfile.lock" }}
           # fallback to using the latest cache if no exact match is found
           - v1-tools-dependencies-
 
@@ -34,13 +34,13 @@ jobs:
       - save_cache:
           paths:
             - ./vendor/bundle
-          key: v1-tools-dependencies-{{ checksum "Gemfile.tools.lock" }}
+          key: v1-tools-dependencies-{{ checksum "Gemfile.lock" }}
 
 
       - run:
           name: run source code analysis
           command: |
-            bundle exec pronto run -c origin/master -f github_status -f github_pr --exit-code
+            bundle exec pronto run -c origin/master -f github_status -f github_pr_review -c origin/master
       - store_artifacts:
           path: ./tmp
 
