@@ -3,4 +3,8 @@ class ArtistsController < ApplicationController
     def index
         @artists=Artist.all
     end
+
+    def create
+        @artists = Artist.new
+    end
 end
